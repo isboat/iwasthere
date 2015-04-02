@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWasThere.BAL", "IWasThere.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWasThere.Configuration", "IWasThere.Configuration\IWasThere.Configuration.csproj", "{941AE538-42F8-4633-90AD-72350D471F7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWasThere.ViewModels", "IWasThere.ViewModels\IWasThere.ViewModels.csproj", "{7D28E641-0326-4A1B-A25A-49DFA0DC3421}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{941AE538-42F8-4633-90AD-72350D471F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{941AE538-42F8-4633-90AD-72350D471F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{941AE538-42F8-4633-90AD-72350D471F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D28E641-0326-4A1B-A25A-49DFA0DC3421}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D28E641-0326-4A1B-A25A-49DFA0DC3421}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D28E641-0326-4A1B-A25A-49DFA0DC3421}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D28E641-0326-4A1B-A25A-49DFA0DC3421}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

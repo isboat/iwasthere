@@ -6,8 +6,19 @@ using System.Web.Mvc;
 
 namespace IWasThere.Web.Controllers
 {
+    using IWasThere.BAL.Interfaces;
+    using IWasThere.Configuration;
+    using IWasThere.ViewModels;
+
     public class HomeController : Controller
     {
+        private readonly IEventService eventService;
+
+        public HomeController()
+        {
+            eventService = IoC.Instance.Resolve<IEventService>();
+        }
+
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
@@ -15,18 +26,15 @@ namespace IWasThere.Web.Controllers
             return View();
         }
 
-        public ActionResult About()
+        [HttpPost]
+        public JsonResult SearchEvent(EventRequestViewModel viewModel)
         {
-            ViewBag.Message = "Your app description page.";
+            if (viewModel == null || string.IsNullOrEmpty(viewModel.SearchTerm))
+            {
+                return this.Json(new BaseResponseViewModel { IsError = true });
+            }
 
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return this.Json(eventService.SearchEvent(viewModel), JsonRequestBehavior.AllowGet);
         }
     }
 }
