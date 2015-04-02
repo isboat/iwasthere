@@ -12,11 +12,19 @@ using IWasThere.Web.Models;
 
 namespace IWasThere.Web.Controllers
 {
+    using IWasThere.BAL.Interfaces;
+    using IWasThere.Configuration;
+
     [Authorize]
     public class AccountController : Controller
     {
-        //
-        // GET: /Account/Login
+
+        private readonly IAccountService accountService;
+
+        public AccountController()
+        {
+            accountService = IoC.Instance.Resolve<IAccountService>();
+        }
 
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
@@ -64,27 +72,10 @@ namespace IWasThere.Web.Controllers
                 return RedirectToAction("ExternalLoginFailure");
             }
 
+
+
             FormsAuthentication.SetAuthCookie(result.UserName, false);
             return RedirectToAction("Index", "Home");
-            //if (OAuthWebSecurity.Login(result.Provider, result.ProviderUserId, createPersistentCookie: false))
-            //{
-            //    return RedirectToLocal(returnUrl);
-            //}
-
-            //if (User.Identity.IsAuthenticated)
-            //{
-            //    // If the current user is logged in add the new account
-            //    //OAuthWebSecurity.CreateOrUpdateAccount(result.Provider, result.ProviderUserId, User.Identity.Name);
-            //    return RedirectToLocal(returnUrl);
-            //}
-            //else
-            //{
-            //    // User is new, ask for their desired membership name
-            //    string loginData = OAuthWebSecurity.SerializeProviderUserId(result.Provider, result.ProviderUserId);
-            //    ViewBag.ProviderDisplayName = OAuthWebSecurity.GetOAuthClientData(result.Provider).DisplayName;
-            //    ViewBag.ReturnUrl = returnUrl;
-            //    return View("ExternalLoginConfirmation", new RegisterExternalLoginModel { UserName = result.UserName, ExternalLoginData = loginData });
-            //}
         }
 
         //
