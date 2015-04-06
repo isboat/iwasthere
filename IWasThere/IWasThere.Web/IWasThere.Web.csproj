@@ -255,6 +255,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\logo.png" />
     <Content Include="Scripts\Controls\EventController.js" />
     <Content Include="Scripts\Services\EventService.js" />
     <Content Include="Scripts\handlebars-1.0.rc.1.min.js" />

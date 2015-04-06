@@ -6,7 +6,7 @@ var EventService = function () {
     self.Search = function (term, onSuccess, onError) {
 
          onSuccess({
-            Items: [{ Title: term }, { Title: 'title 2' }]
+            Items: [{ Title: term, Url:'/url' }, { Title: 'title 2', Url: '/url' }]
         });
          return;
 

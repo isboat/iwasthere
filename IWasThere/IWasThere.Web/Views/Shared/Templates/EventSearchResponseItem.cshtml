@@ -1,7 +1,11 @@
 ﻿<script type="text/template" id="EventSearchResponseItem_Templ">
     <ul>
         {{#each Items}}
-        <li>{{{Title}}}</li>
+        <li>
+            <div>
+                <a href="{{Url}}">{{{Title}}}</a>
+            </div>
+        </li>
         {{/each}}
     </ul>
 </script>
