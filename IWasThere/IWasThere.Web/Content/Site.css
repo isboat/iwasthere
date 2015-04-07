@@ -11,13 +11,16 @@
     min-width: 100px;
     min-height: 30px;
     text-align: center;
-    font-size: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* search box*/
 .searchBoxDiv {
     text-align: center;
 }
+
 #searchBox {
     width: 500px;
     height: 35px;
@@ -40,7 +43,28 @@ a {
     outline: none;
     padding-left: 3px;
     padding-right: 3px;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+/* search result */
+li {
+    list-style: none;
+}
+
+#results ul li {
+    background-color: #ccd6cc;
+    border-bottom: 1px solid #dedede;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#results ul li a{
+    vertical-align: middle;
+    display: block;
+}
+
+#results ul li:nth-child(even) {
+    background-color: #e5eae5;
 }
 
 header, footer, hgroup,

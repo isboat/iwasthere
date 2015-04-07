@@ -15,5 +15,23 @@ namespace IWasThere.BAL
         {
             return new EventSearchResponseViewModel();
         }
+
+        public EventPostsViewModel GetEventPosts(EventPostRequest request)
+        {
+            return new EventPostsViewModel
+                   {
+                       Items =
+                           new List<EventPostViewModel>
+                           {
+                               new EventPostViewModel
+                               {
+                                   Caption =
+                                       "caption test",
+                                   PicUrl =
+                                       "/pciurl"
+                               }
+                           }
+                   };
+        }
     }
 }

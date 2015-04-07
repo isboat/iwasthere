@@ -1,0 +1,17 @@
+﻿@model IWasThere.ViewModels.EventViewModel
+
+@{
+    ViewBag.Title = "Event";
+}
+
+<h2>@Model.Title</h2>
+<div>Description here</div>
+<div>
+    <button class="btn btnGreen">Upload Yours</button>
+</div>
+
+<div class="eventPosts">
+    <ul></ul>
+</div>
+
+@Html.Partial("Templates/EventPosts")

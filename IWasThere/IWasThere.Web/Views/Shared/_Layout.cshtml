@@ -15,7 +15,7 @@
             <div class="content-wrapper">
                 <div class="float-left">
                     <p class="site-title">
-                        @Html.ActionLink("your logo here", "Index", "Home", new { @class = "logo" })
+                        @Html.ActionLink("your logo here", "Index", "Home", null, new { @class = "logo" })
                     </p>
                 </div>
                 <div class="float-right">
@@ -41,14 +41,12 @@
 
         @Scripts.Render("~/bundles/jquery")
 
-        <script type="text/javascript" src="@Url.Content("Scripts/handlebars-1.0.rc.1.min.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/handlebars-1.0.rc.1.min.js")"></script>
 
-        <script type="text/javascript" src="@Url.Content("Scripts/UiHelper.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/UiHelper.js")"></script>
 
-        <script type="text/javascript" src="@Url.Content("Scripts/Services/EventService.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Services/EventService.js")"></script>
 
-        <script type="text/javascript" src="@Url.Content("Scripts/Controls/EventController.js")"></script>
-
-        @Html.Partial("Templates/EventSearchResponseItem")
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Controls/EventController.js")"></script>
     </body>
 </html>

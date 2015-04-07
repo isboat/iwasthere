@@ -40,8 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseResponseViewModel.cs" />
+    <Compile Include="EventPostRequest.cs" />
+    <Compile Include="EventPostsViewModel.cs" />
     <Compile Include="EventRequestViewModel.cs" />
     <Compile Include="EventSearchResponseViewModel.cs" />
+    <Compile Include="EventViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

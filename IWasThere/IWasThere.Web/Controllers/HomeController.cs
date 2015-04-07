@@ -12,11 +12,8 @@ namespace IWasThere.Web.Controllers
 
     public class HomeController : Controller
     {
-        private readonly IEventService eventService;
-
         public HomeController()
         {
-            eventService = IoC.Instance.Resolve<IEventService>();
         }
 
         public ActionResult Index()
@@ -24,17 +21,6 @@ namespace IWasThere.Web.Controllers
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
             return View();
-        }
-
-        [HttpPost]
-        public JsonResult SearchEvent(EventRequestViewModel viewModel)
-        {
-            if (viewModel == null || string.IsNullOrEmpty(viewModel.SearchTerm))
-            {
-                return this.Json(new BaseResponseViewModel { IsError = true });
-            }
-
-            return this.Json(eventService.SearchEvent(viewModel), JsonRequestBehavior.AllowGet);
         }
     }
 }

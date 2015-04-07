@@ -11,5 +11,7 @@ namespace IWasThere.BAL.Interfaces
     public interface IEventService
     {
         EventSearchResponseViewModel SearchEvent(EventRequestViewModel viewModel);
+
+        EventPostsViewModel GetEventPosts(EventPostRequest request);
     }
 }
