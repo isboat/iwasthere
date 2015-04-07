@@ -8,6 +8,8 @@ namespace IWasThere.ViewModels
 {
     public class EventViewModel
     {
+        public int EventId { get; set; }
+
         public string Title { get; set; }
     }
 }

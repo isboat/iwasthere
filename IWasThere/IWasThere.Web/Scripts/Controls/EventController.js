@@ -4,21 +4,6 @@ var EventController = function () {
     var self = this;
     var eventSvc = window.app.EventService;
 
-    /*************** BEGIN: Event binding *****************/
-
-    $(document).ready(function () {
-        
-        $('#searchBox').keyup(function () {
-            var text = $(this).val();
-            if (text.length > 4) {
-                self.Search(text);
-            }
-        });
-    });
-
-    /*************** END: Event binding *****************/
-
-
     /************** BEGIN: Service requests **************/
 
     self.Search = function (term) {
@@ -43,11 +28,11 @@ var EventController = function () {
             );
     };
 
-    self.GetEventPosts = function () {
+    self.GetEventPosts = function (eventId, take) {
 
         var req = {
-            EventId: 1,
-            take: 10
+            EventId: eventId,
+            Take: take
         };
 
         eventSvc.GetEventPosts(

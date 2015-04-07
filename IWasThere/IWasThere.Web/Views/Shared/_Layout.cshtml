@@ -9,6 +9,16 @@
         <script type="text/javascript">
             window.app = {};
         </script>
+        
+        @Scripts.Render("~/bundles/jquery")
+
+        <script type="text/javascript" src="@Url.Content("~/Scripts/handlebars-1.0.rc.1.min.js")"></script>
+
+        <script type="text/javascript" src="@Url.Content("~/Scripts/UiHelper.js")"></script>
+
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Services/EventService.js")"></script>
+
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Controls/EventController.js")"></script>
     </head>
     <body>
         <header>
@@ -38,15 +48,5 @@
                 </div>
             </div>
         </footer>
-
-        @Scripts.Render("~/bundles/jquery")
-
-        <script type="text/javascript" src="@Url.Content("~/Scripts/handlebars-1.0.rc.1.min.js")"></script>
-
-        <script type="text/javascript" src="@Url.Content("~/Scripts/UiHelper.js")"></script>
-
-        <script type="text/javascript" src="@Url.Content("~/Scripts/Services/EventService.js")"></script>
-
-        <script type="text/javascript" src="@Url.Content("~/Scripts/Controls/EventController.js")"></script>
     </body>
 </html>
