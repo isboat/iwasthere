@@ -46,6 +46,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IWasThere.Configuration\IWasThere.Configuration.csproj">
+      <Project>{941AE538-42F8-4633-90AD-72350D471F7F}</Project>
+      <Name>IWasThere.Configuration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IWasThere.ViewModels\IWasThere.ViewModels.csproj">
       <Project>{7D28E641-0326-4A1B-A25A-49DFA0DC3421}</Project>
       <Name>IWasThere.ViewModels</Name>

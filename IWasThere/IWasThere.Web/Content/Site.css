@@ -16,6 +16,12 @@
     text-transform: uppercase;
 }
 
+.facebookbtn {
+    background-color: #2953ad;
+    text-transform: none;
+    color: #fff;
+}
+
 /* search box*/
 .searchBoxDiv {
     text-align: center;
@@ -23,9 +29,9 @@
 
 #searchBox {
     width: 500px;
-    height: 35px;
-    font-size: 30px;
-    color: #e2e2e2;
+    height: 30px;
+    font-size: 25px;
+    color: #585858;
 }
 
 body {
@@ -342,9 +348,8 @@ aside {
 }
 
 #socialLoginForm {
-    margin-left: 40px;
-    float: left;
     width: 40%;
+    margin: 0 auto;
 }
 
     #socialLoginForm h2 {

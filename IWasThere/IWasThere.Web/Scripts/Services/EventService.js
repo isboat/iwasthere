@@ -10,6 +10,12 @@ var EventService = function () {
         //});
         // return;
 
+        // check local storage first
+        var localObj = window.app.LocalStorage.Get(term);
+        if (localObj) {
+            return onSuccess(localObj);
+        }
+
         var obj = {
             SearchTerm: term
         };
@@ -20,6 +26,10 @@ var EventService = function () {
             data: obj,
             success: function (data) {
                 if (data && !data.IsError) {
+
+                    // store locally
+                    window.app.LocalStorage.Store({ Key: term, Data: data });
+
                     onSuccess(data);
                 }
             },

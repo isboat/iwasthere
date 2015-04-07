@@ -2,12 +2,10 @@
     ViewBag.Title = "Log in";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-</hgroup>
-
 <section class="social" id="socialLoginForm">
-    <h2>Use another service to log in.</h2>
+    <h2>Log in.</h2>
     @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+
+    <div class="subScript">Nothing is posted on facebook or any other social networking site.</div>
 </section>
 

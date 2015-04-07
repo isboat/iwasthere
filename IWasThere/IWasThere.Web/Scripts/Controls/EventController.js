@@ -18,6 +18,11 @@ var EventController = function () {
     };
 
     self.Search = function (term) {
+
+        if (!term) {
+            return;
+        }
+
         eventSvc.Search(
             term,
             function (data) {
@@ -29,6 +34,10 @@ var EventController = function () {
     };
 
     self.GetEventPosts = function (eventId, take) {
+
+        if (!eventId || !take) {
+            return;
+        }
 
         var req = {
             EventId: eventId,
