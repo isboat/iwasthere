@@ -4,18 +4,16 @@ var EventService = function () {
     var self = this;
 
     self.Search = function (term, onSuccess, onError) {
+        
+        /* check local storage first
 
-        // onSuccess({
-        //    Items: [{ Title: term, Url:'/url' }, { Title: 'title 2', Url: '/url' },{ Title: term, Url:'/url' }, { Title: 'title 2', Url: '/url' }]
-        //});
-        // return;
-
-        // check local storage first
         var localObj = window.app.LocalStorage.Get(term);
+
         if (localObj) {
+            var expiration = new Date(localObj.Time).getSeconds() - new Date().getSeconds();
             return onSuccess(localObj);
         }
-
+        */
         var obj = {
             SearchTerm: term
         };
@@ -28,7 +26,7 @@ var EventService = function () {
                 if (data && !data.IsError) {
 
                     // store locally
-                    window.app.LocalStorage.Store({ Key: term, Data: data });
+                    //window.app.LocalStorage.Store({ Key: term, CacheObj: { Data: data, Time: new Date().toJSON() } });
 
                     onSuccess(data);
                 }

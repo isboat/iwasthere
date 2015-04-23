@@ -25,7 +25,7 @@ namespace IWasThere.Web.Controllers
         // GET: /Event/
         public ActionResult Get(int id)
         {
-            var model = new EventViewModel { Title = "Event Title", EventId = 1};
+            var model = this.eventService.GetEvent(id);
             return this.View("Event", model);
         }
 

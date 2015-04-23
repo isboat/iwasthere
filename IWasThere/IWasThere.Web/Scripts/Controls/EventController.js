@@ -5,18 +5,7 @@ var EventController = function () {
     var eventSvc = window.app.EventService;
 
     /************** BEGIN: Service requests **************/
-
-    self.Search = function (term) {
-        eventSvc.Search(
-            term,
-            function (data) {
-                var text = window.app.UI.Render('#EventSearchResponseItem_Templ', data);
-                $('#results').html(text);
-            },
-            function () { }
-            );
-    };
-
+    
     self.Search = function (term) {
 
         if (!term) {
@@ -48,7 +37,7 @@ var EventController = function () {
             req,
             function (data) {
                 var text = window.app.UI.Render('#EventPosts_Templ', data);
-                $('.eventPosts ul').append(text);
+                $('.eventPosts').append(text);
             },
             function () { }
             );

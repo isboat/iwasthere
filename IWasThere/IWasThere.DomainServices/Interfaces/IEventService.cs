@@ -13,5 +13,7 @@ namespace IWasThere.BAL.Interfaces
         EventSearchResponseViewModel SearchEvent(EventRequestViewModel viewModel);
 
         EventPostsViewModel GetEventPosts(EventPostRequest request);
+
+        EventViewModel GetEvent(int id);
     }
 }

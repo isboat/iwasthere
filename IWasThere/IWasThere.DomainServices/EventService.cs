@@ -12,6 +12,16 @@ namespace IWasThere.BAL
 
     public class EventService: IEventService
     {
+        public EventService()
+        {
+            
+        }
+
+        public EventViewModel GetEvent(int id)
+        {
+            return new EventViewModel { Title = "Event Title", EventId = id, Description = "Visit Event for news & inspiration on event marketing, exhibitions, product launches, parties, hospitality and other brand experiences" };
+        }
+
         public EventSearchResponseViewModel SearchEvent(EventRequestViewModel viewModel)
         {
             return new EventSearchResponseViewModel
@@ -47,6 +57,15 @@ namespace IWasThere.BAL
                            {
                                new EventPostViewModel
                                {
+                                   PostId = 2,
+                                   Caption =
+                                       "caption test",
+                                   PicUrl =
+                                       "/pciurl"
+                               },
+                               new EventPostViewModel
+                               {
+                                   PostId = 1,
                                    Caption =
                                        "caption test",
                                    PicUrl =

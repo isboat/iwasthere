@@ -3,16 +3,25 @@
 @{
     ViewBag.Title = "Event";
 }
-<input type="hidden" id="eventid" data-eventid="@Model.EventId"/>
+<div id="eventPage">
+    <input type="hidden" id="eventid" data-eventid="@Model.EventId"/>
+    <div class="eventsSearch">
+        <div>
+            <input type="text"/>
+        </div>
+        <div class="eventsSearchResult"></div>
+    </div>
+    <div class="eventTitle">
+        <h2>@Model.Title</h2>
+    </div>
+    <div>
+        <div>@Model.Description</div>
+    </div>
+    <div>
+        <button class="btn btn-success">Upload Yours</button>
+    </div>
 
-<h2>@Model.Title</h2>
-<div>Description here</div>
-<div>
-    <button class="btn btnGreen">Upload Yours</button>
-</div>
-
-<div class="eventPosts">
-    <ul></ul>
+    <div class="eventPosts"></div>
 </div>
 
 @Html.Partial("Templates/EventPosts")

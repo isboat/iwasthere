@@ -5,7 +5,7 @@
 }
 
 /* BUTTONS */
-.btn {
+/*.btn {
     border-radius: 3px 4px;
     display: block;
     min-width: 100px;
@@ -14,7 +14,7 @@
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
-}
+}*/
 
 .facebookbtn {
     background-color: #2953ad;
@@ -29,9 +29,27 @@
 
 #searchBox {
     width: 500px;
-    height: 30px;
-    font-size: 25px;
+    font-size: 15px;
     color: #585858;
+}
+
+/* Event page */
+
+#eventPage .eventTitle {
+    text-align: center;
+}
+
+.eventPosts .eventPost .details .likes img {
+    width: 25px;
+    height: 27px;
+    cursor: pointer;
+}
+
+.eventPosts .eventPost {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
 }
 
 body {
@@ -147,9 +165,8 @@ h5, h6 {
 }
 
     .main-content {
-        background: url("../Images/accent.png") no-repeat;
+        /*background: url("../Images/accent.png") no-repeat;*/
         padding-left: 10px;
-        padding-top: 30px;
     }
 
     .featured + .main-content {
@@ -196,14 +213,6 @@ footer {
     margin: 0 0 10px;
     text-align: right;
 }
-
-    #login a {
-        background-color: #d3dce0;
-        margin-left: 10px;
-        margin-right: 3px;
-        padding: 2px 3px;
-        text-decoration: none;
-    }
 
     #login a.username {
         background: none;

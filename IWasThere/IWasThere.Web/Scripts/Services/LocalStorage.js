@@ -4,8 +4,8 @@ var LocalStorage = function() {
     var self = this;
 
     self.Store = function(obj) {
-        if (obj && obj.Key) {
-            window.localStorage.setItem(obj.Key, JSON.stringify(obj.Data));
+        if (obj && obj.Key && obj.CacheObj) {
+            window.localStorage.setItem(obj.Key, JSON.stringify(obj.CacheObj));
         }
     };
 

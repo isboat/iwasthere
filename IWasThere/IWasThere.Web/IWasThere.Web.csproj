@@ -200,6 +200,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -256,17 +258,19 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\like.png" />
     <Content Include="Images\logo.png" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Controls\EventController.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\less.js" />
     <Content Include="Scripts\PageLogics\EventPage.js" />
     <Content Include="Scripts\PageLogics\Homepage.js" />
     <Content Include="Scripts\Services\EventService.js" />
     <Content Include="Scripts\handlebars-1.0.rc.1.min.js" />
+    <Content Include="Scripts\Services\LocalStorage.js" />
     <Content Include="Scripts\UiHelper.js" />
     <Content Include="unity.config" />
-    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.8.2.js" />
-    <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,18 +1,16 @@
 ﻿<script type="text/template" id="EventPosts_Templ">
     {{#each Items}}
-    <li>
-        <div class="eventPost">
-            <div class="pic">
-                <img src="{{{PicUrl}}}" />
-            </div>
-            <div class="details">
-                <div class="caption">{{{Caption}}}</div>
-                <div>
-                    <img src="" alt="Like" />
-                    <img src="" alt="Dislike" />
-                </div>
+    <div class="eventPost" data-eventid="{{{PostId}}}">
+        <div class="pic">
+            <img src="{{{PicUrl}}}" />
+        </div>
+        <div class="details">
+            <div class="caption">{{{Caption}}}</div>
+            <div class="likes">
+                <img src="@Url.Content("~/Images/like.png")" alt="Like" title="This is cool, I like it" />
+                <img src="" alt="Dislike" title="This is not cool, I dislike it" />
             </div>
         </div>
-    </li>
+    </div>
     {{/each}}
 </script>
